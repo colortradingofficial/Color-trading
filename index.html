@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>𝐏𝐑𝐄𝐃𝐈𝐂𝐓𝐈𝐎𝐍 𝐙𝐎𝐍𝐄🎯</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(270deg,#0a0a0a,#1a1a1a,#0a0a0a);
+background-size:400% 400%;
+
+animation:bgMove 10s infinite alternate;
+
+color:white;
+
+}
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+
+}
+
+.container{
+
+width:92%;
+max-width:420px;
+
+background:#121212;
+
+padding:35px 25px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:
+0 0 30px rgba(255,70,30,0.5),
+0 0 80px rgba(255,70,30,0.3);
+
+}
+
+.logo{
+
+width:120px;
+height:120px;
+
+border-radius:50%;
+border:4px solid #ff4a2a;
+
+object-fit:cover;
+
+box-shadow:0 0 25px #ff4a2a;
+
+margin:auto;
+
+}
+
+.title{
+
+font-size:26px;
+margin-top:15px;
+font-weight:bold;
+
+}
+
+.highlight{
+
+color:#ff4a2a;
+margin-top:10px;
+font-weight:bold;
+font-size:18px;
+
+}
+
+.desc{
+
+margin-top:10px;
+opacity:.8;
+
+}
+
+.join-btn{
+
+margin-top:25px;
+
+display:inline-block;
+
+background:#ff4a2a;
+
+padding:16px 50px;
+
+border-radius:12px;
+
+color:white;
+
+font-weight:bold;
+
+font-size:18px;
+
+text-decoration:none;
+
+box-shadow:
+0 0 20px #ff4a2a,
+0 0 50px #ff4a2a;
+
+cursor:pointer;
+
+}
+
+.timer-title{
+
+margin-top:35px;
+color:#ff4a2a;
+font-weight:bold;
+
+}
+
+.timer{
+
+display:flex;
+justify-content:center;
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.box{
+
+background:#0b0b0b;
+
+padding:15px;
+
+border-radius:12px;
+
+border:2px solid #ff4a2a;
+
+box-shadow:0 0 15px rgba(255,70,30,0.4);
+
+width:80px;
+
+}
+
+.number{
+
+font-size:28px;
+color:#ff4a2a;
+
+}
+
+.label{
+
+font-size:12px;
+opacity:.7;
+
+}
+
+.license{
+
+margin-top:25px;
+
+font-size:13px;
+
+color:#aaa;
+
+border-top:1px solid rgba(255,70,30,0.3);
+
+padding-top:15px;
+
+line-height:20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img class="logo" src="https://raw.githubusercontent.com/colortradingofficial/Color-trading/refs/heads/main/IMG_20260304_233100_222.jpg">
+
+<div class="title">
+𝐏𝐑𝐄𝐃𝐈𝐂𝐓𝐈𝐎𝐍 𝐙𝐎𝐍𝐄🎯
+</div>
+
+<div class="highlight">
+Recover all your Losses  
+Get 99.9% accurate Shots 🔥
+</div>
+
+<div class="desc">
+Join my exclusive Telegram group for premium tips, updates & more excitement!
+</div>
+
+<button class="join-btn" onclick="joinTelegram()">
+Join Now
+</button>
+
+<div class="timer-title">
+⚡ Offer Ends In ⚡
+</div>
+
+<div class="timer">
+
+<div class="box">
+<div class="number" id="hours">00</div>
+<div class="label">Hours</div>
+</div>
+
+<div class="box">
+<div class="number" id="minutes">09</div>
+<div class="label">Minutes</div>
+</div>
+
+<div class="box">
+<div class="number" id="seconds">37</div>
+<div class="label">Seconds</div>
+</div>
+
+</div>
+
+<div class="license">
+✔ Verified Premium Community
+</div>
+
+</div>
+
+<script>
+
+let time = 4177;
+
+function format(n){
+return n < 10 ? "0"+n : n;
+}
+
+setInterval(function(){
+
+let h = Math.floor(time/3600);
+let m = Math.floor((time%3600)/60);
+let s = time%60;
+
+document.getElementById("hours").innerHTML=format(h);
+document.getElementById("minutes").innerHTML=format(m);
+document.getElementById("seconds").innerHTML=format(s);
+
+time--;
+
+if(time<0){
+time=4177;
+}
+
+},1000);
+
+
+// encrypted telegram link
+function joinTelegram(){
+
+let encrypted = "aHR0cHM6Ly90Lm1lLys3aUxlN3dYVklNWTRabUps";
+
+let link = atob(encrypted);
+
+window.location.href = link;
+
+}
+
+</script>
+
+</body>
+</html>
